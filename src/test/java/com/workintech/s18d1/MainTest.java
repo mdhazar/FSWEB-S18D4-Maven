@@ -1,7 +1,7 @@
 package com.workintech.s18d1;
 
 import com.workintech.s18d1.dao.BurgerDao;
-import com.workintech.s18d1.dao.BurgerDaoImpl;
+import com.workintech.s18d1.dao.BurgerDaoimpl;
 import com.workintech.s18d1.entity.BreadType;
 import com.workintech.s18d1.entity.Burger;
 import com.workintech.s18d1.exceptions.BurgerErrorResponse;
@@ -33,7 +33,7 @@ class MainTest {
     private EntityManager entityManager;
 
     @InjectMocks
-    private BurgerDaoImpl burgerDao;
+    private BurgerDaoimpl burgerDao;
 
     @BeforeEach
     void setUp() {
@@ -161,7 +161,7 @@ class MainTest {
     }
     @Test
     void testImplementsBurgerDaoInterface() {
-        BurgerDaoImpl burgerDaoImpl = new BurgerDaoImpl(null);
+        BurgerDaoimpl burgerDaoImpl = new BurgerDaoimpl(null);
         assertTrue(burgerDaoImpl instanceof BurgerDao, "BurgerDaoImpl should implement BurgerDao interface");
     }
 
